@@ -1,18 +1,18 @@
 {
-    "name": "energon7/nova-menu-builder",
+    "name": "aiman/nova-menu-builder",
     "description": "Advanced Menu Builder Tool for Laravel Nova.",
     "keywords": [
         "laravel",
         "nova",
         "menu",
         "builder",
-        "Energon7"
+        "Aiman"
     ],
     "license": "MIT",
     "authors": [
         {
-            "name": "Azer Mammadov",
-            "email": "energon7777@gmail.com",
+            "name": "Mohamed Aiman",
+            "email": "aiman1717a@gmail.com",
             "role": "Developer"
         }
     ],

@@ -29,7 +29,7 @@ class MenuBuilderServiceProvider extends ServiceProvider
         $this->publishConfig();
 
         Nova::serving(function (ServingNova $event) {
-            //
+            Nova::script('thaana', __DIR__.'/../dist/jtk.js');
         });
 
         Nova::resources([

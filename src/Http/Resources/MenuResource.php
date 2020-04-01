@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use Energon7\MenuBuilder\BuilderResourceTool;
 use Energon7\MenuBuilder\Http\Models\Menu;
 use Laravel\Nova\Fields\ID;
+use Laravel\Nova\Fields\Select;
 use Laravel\Nova\Fields\Text;
 use Laravel\Nova\Resource;
 
@@ -48,13 +49,23 @@ class MenuResource extends Resource
     public function fields(Request $request)
     {
         return [
-            ID::make()->sortable(),
+            ID::make()->sortable()->hideFromIndex()->hideFromDetail(),
 
             Text::make(__('Name'), 'name')
                 ->sortable()
-                ->rules('required', 'max:255', 'unique:menus,name'),
+                ->rules('required', 'max:255', 'unique:menus,name,{{resourceId}}'),
 
-            Text::make(__('Slug'), 'slug')->hideWhenCreating()->hideWhenUpdating(),
+            Text::make(__('Slug'), 'slug')
+                ->hideWhenCreating()
+                ->hideWhenUpdating(),
+
+            Select::make(__('Type'), 'type')->options([
+                'main_menu' => 'Main Menu',
+                'secondary_menu' => 'Secondary Menu',
+                'vertical_menu' => 'Vertical Menu',
+                'currency_menu' => 'Currency Menu',
+                'language_menu' => 'Langauge Menu',
+            ])->rules('required', 'unique:menus,type,{{resourceId}}')->displayUsingLabels(),
 
             Text::make(__('Menu Helper'), function () {
                 return "<code class='p-2 bg-30 text-sm'><span class='text-primary'>{!!</span> <span class='text-info'>menu_builder(</span><span class='text-success'>'".$this->slug."'</span><span class='text-info'>)</span> <span class='text-primary'>!!}</span></code>";

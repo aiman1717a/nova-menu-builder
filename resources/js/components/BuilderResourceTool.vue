@@ -1,6 +1,6 @@
 <template>
     <div class="py-3">
-        
+
         <div class="flex justify-end menu-button">
             <a v-for="locale in locales" v-if="currentLang!==locale.code_field"
                :key="locale"
@@ -156,13 +156,22 @@
                 <div slot="container">
                     <div class="flex flex-wrap justify-between mb-6">
                         <h2 class=" text-90 font-normal text-xl">{{ __('Add Menu item') }}</h2>
-                        <toggle-button
-                            v-model="newItem.enabled"
-                            :color="switchColor"
-                            :width="70"
-                            :sync="true"
-                            :labels="toogleLabels"
-                        />
+                        <div>
+                            <toggle-button
+                                v-model="thaana_status"
+                                :color="switchColor"
+                                :width="110"
+                                :sync="true"
+                                :labels="thaanaToggleLabels"
+                            />
+                            <toggle-button
+                                v-model="newItem.enabled"
+                                :color="switchColor"
+                                :width="70"
+                                :sync="true"
+                                :labels="toogleLabels"
+                            />
+                        </div>
                     </div>
 
                     <form autocomplete="off">
@@ -173,7 +182,6 @@
                                 </label>
                             </div>
                             <div class="py-4 w-4/5">
-
                                 <input
                                     :value="newItem.name ? newItem.name[currentLang]: ''"
                                     @input="fillNameInput($event.target.value)"
@@ -181,6 +189,10 @@
                                     type="text"
                                     :placeholder="this.__('Name')"
                                     class="w-full form-control form-input form-input-bordered"
+                                    :class="rtl"
+                                    @keypress="fillNameInput($event.target.value)"
+                                    @keyup="fillNameInput($event.target.value)"
+                                    @keydown="fillNameInput($event.target.value)"
                                 />
 
                             </div>
@@ -441,6 +453,8 @@ export default {
         menuItems: [],
         toogleLabels: false,
         switchColor: {},
+        thaana_status: false,
+        thaanaToggleLabels: false,
     }),
 
     methods: {
@@ -568,23 +582,63 @@ export default {
         },
     },
     computed:{
-      currentLang() {
-          return this.$route.query.lang || window.config.locale;
-      }
+        currentLang() {
+            return this.$route.query.lang || window.config.locale;
+        },
+        rtl: function () {
+            if(this.thaana_status){
+                return 'rtl';
+            }
+        }
+    },
+    watch: {
+        newItem: {
+            deep: true,
+            handler() {
+                // console.log(this.newItem.name)
+            }
+        },
+        thaana_status: function (value) {
+            if(value){
+                thaanaKeyboard.defaultKeyboard = 'phonetic';
+                thaanaKeyboard.setHandlerById('name', 'enable');
+            }else{
+                thaanaKeyboard.defaultKeyboard = 'phonetic';
+                thaanaKeyboard.setHandlerById('name', 'disable');
+            }
+        },
     },
     mounted() {
-
-        console.log(this.currentLang);
+        var ref  = this;
         this.newItem.menu_id = this.resourceId;
         this.toogleLabels = { checked: this.__('Enabled'), unchecked: this.__('Disabled') };
+        this.thaanaToggleLabels = { checked: this.__('Thaana Enabled'), unchecked: this.__('Thaan Disabled') };
         this.switchColor = { checked: '#21b978', unchecked: '#dae1e7', disabled: '#eef1f4' };
         this.getLocales();
         this.getData();
+
+
+        // if(this.currentLang == 'dh'){
+        //     this.thaana_status = true;
+        // }else{
+        //     this.thaana_status = false;
+        // }
+        // this.$nextTick(function () {
+        //     if(ref.currentLang == 'dh'){
+        //         ref.thaana_status = true;
+        //     }else{
+        //         ref.thaana_status = false;
+        //     }
+        // })
     },
 };
 </script>
 
 <style scope>
+.rtl {
+    direction: RTL;
+}
+
 .CodeMirror {
     min-height: 60px;
     height: auto !important;
