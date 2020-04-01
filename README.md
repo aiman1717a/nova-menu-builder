@@ -76,6 +76,21 @@ booleans default is true
 {!! menu_json('main') !!}
 ```
 
+* **menu_type('type')**.   
+
+	Returns a json with all items for given type
+	| Param          | 
+	| -------------- |
+	| main_menu      | 
+	| secondary_menu | 
+	| vertical_menu  | 
+	| currency_menu  | 
+	| langauge_menu  | 
+
+```php
+{!! menu_type('main_menu') !!}
+```
+
 
 ## Localization
 
