@@ -1,25 +1,10 @@
 #Advanced Nova Menu Builder
-
-This package forked from [Nova Menu Builder](https://github.com/InfinetyEs/Nova-Menu-Builder)
-
+This package forked from [Nova Menu Builder](https://github.com/Energon7/nova-menu-builder)
+This package supports thaana keyboard by [TK](https://github.com/jawish/jtk)
 
 
 !!!
-####This package work only with [Spatie Translatable](https://github.com/spatie/laravel-translatable)
-
-
-Fixes :
-
-    - fix child class (now child class assign to child - ul )
-    - fix too many requests to database
-    - fix enabling/disabling sub menu
-    
-
-   
-Updates : 
-
-    - added compatibility with Spatie Translatable package.
-    - added dynamic language selector from database
+####This package uses [Spatie Translatable](https://github.com/spatie/laravel-translatable)
 
  
 This tool allows you to create menus in Laravel Nova
@@ -131,25 +116,3 @@ Set your translations in the corresponding xx.json file located in /resources/la
 "Enabled": "Enabled",
 "Disabled": "Disabled"
 ```
-
-
-## Changelog
-
-Please see [CHANGELOG](CHANGELOG.md) for more information on what has changed recently.
-
-## Contributing
-
-Please see [CONTRIBUTING](CONTRIBUTING.md) for details.
-
-## Security
-
-If you discover any security related issues, please email energon7777@gmail.com instead of using the issue tracker.
-
-## Postcardware
-
-You're free to use this package, but if it makes it to your production environment we highly appreciate you sending us a postcard from your hometown, mentioning which of our package(s) you are using.
-
-
-## License
-
-The MIT License (MIT). Please see [License File](LICENSE.md) for more information.
