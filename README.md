@@ -14,6 +14,8 @@ This tool allows you to create menus in Laravel Nova
 
 ![menu builder](https://user-images.githubusercontent.com/36910126/78132936-02f73480-7437-11ea-9dc0-f1858dbf18d6.PNG)
 
+![menu builder](https://user-images.githubusercontent.com/36910126/78133174-684b2580-7437-11ea-8789-6db2e139e923.PNG)
+
 
 ## Installation
 
