@@ -1,10 +1,9 @@
-#Advanced Nova Menu Builder
+# Nova Thaana Menu Builder
 This package forked from [Nova Menu Builder](https://github.com/Energon7/nova-menu-builder)
 This package supports thaana keyboard by [TK](https://github.com/jawish/jtk)
 
 
-!!!
-####This package uses [Spatie Translatable](https://github.com/spatie/laravel-translatable)
+This package uses [Spatie Translatable](https://github.com/spatie/laravel-translatable)
 
  
 This tool allows you to create menus in Laravel Nova
@@ -20,7 +19,7 @@ This tool allows you to create menus in Laravel Nova
 You can install the package in to a Laravel app that uses [Nova](https://nova.laravel.com) via composer:
 
 ```bash
-composer require energon7/nova-menu-builder
+composer require aiman/nova-menu-builder
 ```
 
 Then you should publish the service provider, migrate database:
