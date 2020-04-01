@@ -28,7 +28,18 @@ Then you should publish the service provider, migrate database:
 php artisan vendor:publish --provider="Energon7\MenuBuilder\MenuBuilderServiceProvider"
 php artisan migrate
 ```
-Then create your own table "languages"
+
+Then run the LangaugesTableSeeder located in seeds folder inside database folder
+```php
+public function run()
+{
+    $this->call(LanguagesTableSeeder::class);
+}
+```
+execute this command to run the seeds
+```
+php artisan db:seed
+```
 
 ## Usage
 
