@@ -28,6 +28,8 @@ class MenuBuilderServiceProvider extends ServiceProvider
 
         $this->publishConfig();
 
+        $this->publishSeeds();
+
         Nova::serving(function (ServingNova $event) {
             Nova::script('thaana', __DIR__.'/../dist/jtk.js');
         });
@@ -62,6 +64,12 @@ class MenuBuilderServiceProvider extends ServiceProvider
         $this->publishes([
             __DIR__.'/Migrations/create_menus_table.php.stub' => database_path('migrations/'.date('Y_m_d_His', time()).'_create_menus_table.php'),
             ], 'menu-builder-migration');
+    }
+    private function publishSeeds()
+    {
+        $this->publishes([
+            __DIR__ . '/Seeds/LanguagesTableSeeder.php' => database_path('seeds/LangaugesTableSeeder.php'),
+        ], 'menu-builder-seeds');
     }
 
     private function publishConfig()

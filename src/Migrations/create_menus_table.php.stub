@@ -40,6 +40,13 @@ class CreateMenusTable extends Migration
 
             $table->foreign('menu_id')->references('id')->on('menus')->onDelete('cascade');
         });
+
+         Schema::create('languages', function (Blueprint $table) {
+            $table->bigIncrements('id');
+            $table->string('code')->nullable();
+            $table->string('label')->nullable();
+            $table->timestamps();
+        });
     }
 
     /**
@@ -51,5 +58,6 @@ class CreateMenusTable extends Migration
     {
         Schema::dropIfExists('menu_items');
         Schema::dropIfExists('menus');
+        Schema::dropIfExists('languages');
     }
 }
