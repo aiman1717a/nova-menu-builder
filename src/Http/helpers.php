@@ -45,3 +45,22 @@ if (!function_exists('menu_json')) {
         return $menu->optionsMenu()->toJson();
     }
 }
+if (!function_exists('menu_type')) {
+
+    /**
+     * Return menu items in json format
+     *
+     * @param   string  $slug
+     *
+     * @return  json
+     */
+    function menu_type($type)
+    {
+        $menu = Menu::whereType($type)->first();
+        if (!$menu) {
+            return '';
+        }
+
+        return $menu->optionsMenu()->toJson();
+    }
+}
