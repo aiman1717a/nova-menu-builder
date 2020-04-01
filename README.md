@@ -1,6 +1,6 @@
 # Nova Thaana Menu Builder
 This package forked from [Nova Menu Builder](https://github.com/Energon7/nova-menu-builder)
-This package supports thaana keyboard by [TK](https://github.com/jawish/jtk)
+This package supports thaana keyboard by [JTK](https://github.com/jawish/jtk)
 
 
 This package uses [Spatie Translatable](https://github.com/spatie/laravel-translatable)
