@@ -130,3 +130,10 @@ Set your translations in the corresponding xx.json file located in /resources/la
 "Enabled": "Enabled",
 "Disabled": "Disabled"
 ```
+
+## Important
+This package is tested for **Nova**
+
+
+## Credit
+Huge Credit goes for [@Jawish Hameed](https://github.com/jawish) for his thaana translation plugin [Thaana Keyboard](https://github.com/jawish/jtk)
