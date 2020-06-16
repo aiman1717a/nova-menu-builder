@@ -1,10 +1,10 @@
 <?php
 
-namespace Energon7\MenuBuilder\Http\Resources;
+namespace Aiman\MenuBuilder\Http\Resources;
 
 use Illuminate\Http\Request;
-use Energon7\MenuBuilder\BuilderResourceTool;
-use Energon7\MenuBuilder\Http\Models\Menu;
+use Aiman\MenuBuilder\BuilderResourceTool;
+use Aiman\MenuBuilder\Http\Models\Menu;
 use Laravel\Nova\Fields\ID;
 use Laravel\Nova\Fields\Select;
 use Laravel\Nova\Fields\Text;

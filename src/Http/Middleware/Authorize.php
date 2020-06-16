@@ -1,8 +1,8 @@
 <?php
 
-namespace Energon7\MenuBuilder\Http\Middleware;
+namespace Aiman\MenuBuilder\Http\Middleware;
 
-use Energon7\MenuBuilder\MenuBuilder;
+use Aiman\MenuBuilder\MenuBuilder;
 
 class Authorize
 {

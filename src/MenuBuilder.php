@@ -1,6 +1,6 @@
 <?php
 
-namespace Energon7\MenuBuilder;
+namespace Aiman\MenuBuilder;
 
 use Laravel\Nova\Nova;
 use Laravel\Nova\Tool;
@@ -12,10 +12,10 @@ class MenuBuilder extends Tool
      *
      * @return void
      */
-public function __construct()
-{
-    $this->withMeta(['test'=>1]);
-}
+    public function __construct()
+    {
+        $this->withMeta(['test'=>1]);
+    }
 
     public function boot()
     {

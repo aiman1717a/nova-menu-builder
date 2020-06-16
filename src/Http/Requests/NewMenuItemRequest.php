@@ -1,10 +1,10 @@
 <?php
 
-namespace Energon7\MenuBuilder\Http\Requests;
+namespace Aiman\MenuBuilder\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
 use Illuminate\Support\Facades\Route;
-use Energon7\MenuBuilder\MenuBuilder;
+use Aiman\MenuBuilder\MenuBuilder;
 
 class NewMenuItemRequest extends FormRequest
 {

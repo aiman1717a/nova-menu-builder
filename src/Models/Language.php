@@ -1,6 +1,6 @@
 <?php
 
-namespace Energon7\MenuBuilder\Http\Models;
+namespace Aiman\MenuBuilder\Http\Models;
 
 use Illuminate\Database\Eloquent\Model;
 

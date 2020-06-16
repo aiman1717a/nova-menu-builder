@@ -23,7 +23,7 @@
     },
     "autoload": {
         "psr-4": {
-            "Energon7\\MenuBuilder\\": "src/"
+            "Aiman\\MenuBuilder\\": "src/"
         },
         "files": [
           "src/Http/helpers.php"
@@ -32,7 +32,7 @@
     "extra": {
         "laravel": {
             "providers": [
-                "Energon7\\MenuBuilder\\MenuBuilderServiceProvider"
+                "Aiman\\MenuBuilder\\MenuBuilderServiceProvider"
             ]
         }
     },

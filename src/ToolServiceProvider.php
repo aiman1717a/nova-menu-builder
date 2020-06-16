@@ -1,11 +1,11 @@
 <?php
 
-namespace Energon7\MenuBuilder;
+namespace Aiman\MenuBuilder;
 
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\ServiceProvider;
-use Energon7\MenuBuilder\Http\Middleware\Authorize;
-use Energon7\MenuBuilder\Http\Resources\MenuResource;
+use Aiman\MenuBuilder\Http\Middleware\Authorize;
+use Aiman\MenuBuilder\Http\Resources\MenuResource;
 use Laravel\Nova\Events\ServingNova;
 use Laravel\Nova\Nova;
 
@@ -51,7 +51,7 @@ class MenuBuilderServiceProvider extends ServiceProvider
         }
 
         Route::middleware(['nova', Authorize::class])
-            ->namespace('Energon7\MenuBuilder\Http\Controllers')
+            ->namespace('Aiman\MenuBuilder\Http\Controllers')
             ->prefix('nova-vendor/menu-builder')
             ->group(__DIR__.'/../routes/api.php');
     }

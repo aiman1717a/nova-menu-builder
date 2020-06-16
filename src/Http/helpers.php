@@ -1,6 +1,6 @@
 <?php
 
-use Energon7\MenuBuilder\Http\Models\Menu;
+use Aiman\MenuBuilder\Http\Models\Menu;
 
 if (!function_exists('menu_builder')) {
 

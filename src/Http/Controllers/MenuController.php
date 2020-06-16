@@ -1,13 +1,13 @@
 <?php
 
-namespace Energon7\MenuBuilder\Http\Controllers;
+namespace Aiman\MenuBuilder\Http\Controllers;
 
-use Energon7\MenuBuilder\Http\Models\Language;
+use Aiman\MenuBuilder\Http\Models\Language;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
-use Energon7\MenuBuilder\Http\Models\Menu;
-use Energon7\MenuBuilder\Http\Models\MenuItems;
-use Energon7\MenuBuilder\Http\Requests\NewMenuItemRequest;
+use Aiman\MenuBuilder\Http\Models\Menu;
+use Aiman\MenuBuilder\Http\Models\MenuItems;
+use Aiman\MenuBuilder\Http\Requests\NewMenuItemRequest;
 
 class MenuController extends Controller
 {

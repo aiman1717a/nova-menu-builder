@@ -1,12 +1,12 @@
 <?php
 
-namespace Energon7\MenuBuilder\Http\Models;
+namespace Aiman\MenuBuilder\Http\Models;
 
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Relations\HasMany;
 use Illuminate\Support\Facades\Route;
-use Energon7\MenuBuilder\Http\Models\Menu;
+use Aiman\MenuBuilder\Http\Models\Menu;
 use Illuminate\Support\Str;
 use Spatie\Translatable\HasTranslations;
 

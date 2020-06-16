@@ -1,12 +1,12 @@
 <?php
 
-namespace Energon7\MenuBuilder\Http\Models;
+namespace Aiman\MenuBuilder\Http\Models;
 
 use Str;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\HasMany;
 use Illuminate\Support\Facades\Route;
-use Energon7\MenuBuilder\Http\Models\MenuItems;
+use Aiman\MenuBuilder\Http\Models\MenuItems;
 
 class Menu extends Model
 {

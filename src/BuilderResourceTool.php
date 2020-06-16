@@ -1,6 +1,6 @@
 <?php
 
-namespace Energon7\MenuBuilder;
+namespace Aiman\MenuBuilder;
 
 use Laravel\Nova\ResourceTool;
 
