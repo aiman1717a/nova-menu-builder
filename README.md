@@ -57,7 +57,7 @@ public function tools()
 {
     return [
         // ...
-        new \Energon7\MenuBuilder\MenuBuilder(),
+        new \Aiman\MenuBuilder\MenuBuilder(),
     ];
 }
 ```
