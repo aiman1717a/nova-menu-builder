@@ -146,8 +146,8 @@ Set your translations in the corresponding xx.json file located in /resources/la
 ```
 
 ## Important
-This package is tested for **Nova**
-
+This package is tested for **Nova v2.0+**
+Latest tested on **nova v3.6.0**
 
 ## Credit
 Huge Credit goes for [@Jawish Hameed](https://github.com/jawish) for his thaana translation plugin [Thaana Keyboard](https://github.com/jawish/jtk)
