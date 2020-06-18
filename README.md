@@ -144,7 +144,8 @@ Set your translations in the corresponding xx.json file located in /resources/la
 ```
 
 ## Important
-This package is tested for **nova 2.0+**
+This package is tested for **Nova v2.0+**
+>>>>>>> 72d95096e722260595172ba62d8ef20f4bd6e024
 Latest tested on **nova v3.6.0**
 
 ## Credit
