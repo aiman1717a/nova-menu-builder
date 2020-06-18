@@ -2,11 +2,9 @@
 This package forked from [Nova Menu Builder](https://github.com/Energon7/nova-menu-builder)
 This package supports thaana keyboard by [JTK](https://github.com/jawish/jtk)
 
-
 This package uses [Spatie Translatable](https://github.com/spatie/laravel-translatable)
 
- 
-This tool allows you to create menus in Laravel Nova
+This tool allows you to create menus in Laravel Nova to a similar fashion to wordpress menu layout and also supports thaana keyboard
 
 <img width="1439" alt="menu builder Home" src="https://user-images.githubusercontent.com/42798230/50765532-7632ea80-1276-11e9-8fed-ec1f6d53983a.png">
 
@@ -146,8 +144,8 @@ Set your translations in the corresponding xx.json file located in /resources/la
 ```
 
 ## Important
-This package is tested for **Nova**
-
+This package is tested for **nova 2.0+**
+Latest tested on **nova v3.6.0**
 
 ## Credit
 Huge Credit goes for [@Jawish Hameed](https://github.com/jawish) for his thaana translation plugin [Thaana Keyboard](https://github.com/jawish/jtk)
