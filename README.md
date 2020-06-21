@@ -26,7 +26,7 @@ composer require aiman/nova-menu-builder
 Then you should publish the service provider, migrate database:
 
 ```bash
-php artisan vendor:publish --provider="Aiman\MenuBuilder\MenuBuilderServiceProvider"
+php artisan vendor:publish --provider="Aiman\MenuBuilder\ToolServiceProvider"
 php artisan migrate
 ```
 
